@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import * as Tone from "tone";
-import SevenNote from "./Components/SevenNote";
+import SequencerApp from "./Components/Sequencer/Sequencer.js";
 
 export default function App() {
   const synth = new Tone.Synth().toDestination();
@@ -178,10 +178,10 @@ export default function App() {
         >
           A
         </button>
+        <div>
+          <SequencerApp />
+        </div>
       </div>
-      {/* <div>
-        <SevenNote />
-      </div> */}
     </div>
   );
 }
