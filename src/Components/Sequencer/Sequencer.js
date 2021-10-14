@@ -20,8 +20,10 @@ function GenerateGrid() {
   return grid;
 }
 
-// Our chosen octave for our five notes. Try changing this for higher or lower notes
 const CHOSEN_OCTAVE = "4";
+
+//!Component to export
+//?Component to export
 
 export default function SequencerApp() {
   // A nested array of objects is not performant, but is easier to understand
@@ -31,10 +33,10 @@ export default function SequencerApp() {
   // Boolean to handle if music is played or not
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Used to visualize which column is making sound
+  //*visualization... working?
   const [currentColumn, setCurrentColumn] = useState(null);
 
-  //Notice the new PolySynth in use here, to support multiple notes at once
+  //*polySynth to support chords
   const synth = new Tone.PolySynth().toDestination();
 
   function handleNoteClick(clickedColumn, clickedNote) {
@@ -87,7 +89,7 @@ export default function SequencerApp() {
         synth.triggerAttackRelease(music[column], "8n", time);
       },
       [0, 1, 2, 3, 4, 5, 6, 7],
-      "8n"
+      "16n"
     );
 
     if (isPlaying) {
@@ -103,7 +105,7 @@ export default function SequencerApp() {
       return;
     }
     setIsPlaying(true);
-    // Toggles playback of our musical masterpiece
+    // Toggles playback
     await Sequencer.start();
     await Tone.Transport.start();
   };
