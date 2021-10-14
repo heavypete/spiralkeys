@@ -3,9 +3,13 @@
   text-align: center;
   height: 100vh;
   padding-top: 100px;
+  /* background-color: gainsboro; */
+  background-image: url(./images/shaah-shahidh-JN4rwu4c7DU-unsplash.jpg);
+  background-size: cover;
+  margin: 10px;
 }
 .note-wrapper {
-  height: 15%;
+  height: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +17,9 @@
 .noteA {
   height: 80px;
   width: 100px;
-  background: rgb(225, 62, 62);
+  /* background: #ebdc0a; */
+  background-image: url(./images/john-towner-CakC6u4d95g-unsplash.jpg);
+  background-size: cover;
   border: 2px solid #ccc;
   border-radius: 2px;
   margin: 2px;
@@ -23,7 +29,9 @@
 .noteC {
   height: 80px;
   width: 80px;
-  background: rgb(216, 210, 18);
+  /* background: #f6c928; */
+  background-image: url(./images/luis-graterol-uAROvYw9WDs-unsplash.jpg);
+  background-size: cover;
   border: 2px solid #ccc;
   border-radius: 2px;
   margin: 2px;
@@ -34,7 +42,9 @@
 .noteE {
   height: 80px;
   width: 80px;
-  background: rgb(97, 26, 160);
+  /* background: #f8d34f; */
+  background-image: url(./images/willian-justen-de-vasconcellos-YIAvaAlAqWk-unsplash.jpg);
+  background-size: cover;
   border: 2px solid #ccc;
   border-radius: 2px;
   margin: 2px;
@@ -45,7 +55,7 @@
 .noteG {
   height: 80px;
   width: 80px;
-  background: rgb(37, 135, 240);
+  background: #f9dd76;
   border: 2px solid #ccc;
   border-radius: 2px;
   margin: 2px;
@@ -56,7 +66,7 @@
 .noteD {
   height: 80px;
   width: 40px;
-  background: rgb(31, 142, 108);
+  background: #fcebb1;
   border: 2px solid #ccc;
   border-radius: 2px;
   margin: 2px;
@@ -65,4 +75,13 @@
 }
 .note:active {
   background: blue;
+}
+
+h1 {
+  color: white;
+}
+
+.title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import * as Tone from "tone";
 import SequencerApp from "./Components/Sequencer/Sequencer.js";
-import ThrillaKeys from "./Components/ThrillaKeys/ThrillaKeys";
+//import ThrillaKeys from "./Components/ThrillaKeys/ThrillaKeys";
 
 export default function App() {
   const synth = new Tone.Synth().toDestination();
@@ -28,7 +28,7 @@ export default function App() {
   }
   return (
     <div className="App">
-      <div className="title">Welcome to Spiral Keys</div>
+      <h1 className="title">Welcome to Florida Keys</h1>
       <div className="note-wrapper5">
         <button
           className="noteA"
@@ -183,9 +183,9 @@ export default function App() {
           <SequencerApp />
         </div>
 
-        <div>
+        {/* <div>
           <ThrillaKeys />
-        </div>
+        </div> */}
       </div>
     </div>
   );
