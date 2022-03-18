@@ -1,0 +1,2 @@
+Clear grid on stop
+new background 

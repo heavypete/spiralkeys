@@ -4,16 +4,16 @@
   height: 100vh;
   padding-top: 100px;
   /* background-color: gainsboro; */
-  background-image: url(./images/shaah-shahidh-JN4rwu4c7DU-unsplash.jpg);
+  /* background-image: url(./images/shaah-shahidh-JN4rwu4c7DU-unsplash.jpg); */
   background-size: cover;
   margin: 10px;
 }
-.note-wrapper {
+/* .note-wrapper {
   height: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 .noteA {
   height: 80px;
   width: 100px;
@@ -43,7 +43,7 @@
   height: 80px;
   width: 80px;
   /* background: #f8d34f; */
-  background-image: url(./images/willian-justen-de-vasconcellos-YIAvaAlAqWk-unsplash.jpg);
+  /* background-image: url(./images/willian-justen-de-vasconcellos-YIAvaAlAqWk-unsplash.jpg); */
   background-size: cover;
   border: 2px solid #ccc;
   border-radius: 2px;

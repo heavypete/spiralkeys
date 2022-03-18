@@ -3,8 +3,7 @@ import "../Sequencer/sequencer.css";
 import * as Tone from "tone";
 //import classNames from "classnames";
 
-// Function which creates a 5x8 grid,
-// with our chosen notes on the vertical axis
+//* Create note grid.
 function GenerateGrid() {
   const grid = [];
   for (let i = 0; i < 8; i++) {
@@ -26,26 +25,24 @@ const CHOSEN_OCTAVE = "4";
 //?Component to export
 
 export default function SequencerApp() {
-  // A nested array of objects is not performant, but is easier to understand
-  // performance is not an issue at this stage anyway
   const [grid, setGrid] = useState(GenerateGrid());
+  GenerateGrid();
 
-  // Boolean to handle if music is played or not
   const [isPlaying, setIsPlaying] = useState(false);
 
   //*visualization... working?
   const [currentColumn, setCurrentColumn] = useState(null);
 
   //*polySynth to support chords
+  //! possibly linked to start time error
+
   const synth = new Tone.PolySynth().toDestination();
 
   function handleNoteClick(clickedColumn, clickedNote) {
-    // Shallow copy of our grid with updated isActive
     let updatedGrid = grid.map((column, columnIndex) =>
       column.map((cell, cellIndex) => {
         let cellCopy = cell;
 
-        // Flip isActive for the clicked note-cell in our grid
         if (columnIndex === clickedColumn && cellIndex === clickedNote) {
           cellCopy.isActive = !cell.isActive;
         }
@@ -59,7 +56,7 @@ export default function SequencerApp() {
   }
 
   const PlayMusic = async () => {
-    // Variable for storing our note in a appropriate format for our synth
+    //* stores notes in sequence
     let music = [];
 
     grid.map((column) => {
@@ -76,7 +73,7 @@ export default function SequencerApp() {
     // Starts our Tone context
     await Tone.start();
 
-    // Tone.Sequence()
+    //Tone.Sequence();
     //@param callback
     //@param "events" to send with callback
     //@param subdivision  to engage callback
@@ -85,15 +82,15 @@ export default function SequencerApp() {
         // Highlight column with styling
         setCurrentColumn(column);
 
-        //Sends the active note to our PolySynth
+        //Sends the active note to  PolySynth
         synth.triggerAttackRelease(music[column], "8n", time);
       },
       [0, 1, 2, 3, 4, 5, 6, 7],
-      "16n"
+      "8n"
     );
 
     if (isPlaying) {
-      // Turn of our player if music is currently playing
+      //* stop playing if playing
       setIsPlaying(false);
       setCurrentColumn(null);
 

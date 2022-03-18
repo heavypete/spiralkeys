@@ -6,7 +6,7 @@ function createNoteTable() {
   for (let i = 0; i < 4; i++) {
     noteFreq[i] = {};
   }
-//! An array of Objects.  4 items.  
+  //! An array of Objects.  4 items.
   noteFreq[0]["A"] = 27.5;
   noteFreq[0]["A#"] = 29.135235094880619;
   noteFreq[0]["B"] = 30.867706328507756;
@@ -54,13 +54,12 @@ export default function ThrillaKeys() {
   function generateKeyboard() {
     //const keyboard = [];
     for (let i = 0; i < noteFrequencies.length; i++) {
-        keyboard.push([]);
+      keyboard.push([]);
 
-        // for (let y = 0; y <= keyboard.length; y++)
-        //   keyboard[index][key]
-      };
+      // for (let y = 0; y <= keyboard.length; y++)
+      //   keyboard[index][key]
     }
-  
+  }
 
   generateKeyboard();
 
@@ -74,6 +73,6 @@ export default function ThrillaKeys() {
       </div>
     </div>
   );
+}
 
-
-console.log(keyboard)
+// console.log(keyboard)
